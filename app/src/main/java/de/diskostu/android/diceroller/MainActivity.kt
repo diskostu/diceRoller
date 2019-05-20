@@ -13,10 +13,12 @@ class MainActivity : AppCompatActivity() {
 
         // apparently, and no one told me that, we don't have to use "findViewById". Instead, we can access the
         // view directly by using the id given in the layout file.
+        // see https://antonioleiva.com/kotlin-android-extensions/ for more info on that
         roll_button.setOnClickListener {
             rollDice()
         }
     }
+
 
     private fun rollDice() {
         val drawableResource = when (val randomNumber = Random.nextInt(6) + 1) {
